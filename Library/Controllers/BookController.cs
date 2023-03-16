@@ -34,7 +34,6 @@ namespace Library.Controllers
             }
             catch (Exception e)
             {
-
                 throw new Exception(e.Message);
             }
         }
@@ -55,7 +54,6 @@ namespace Library.Controllers
             }
             catch (Exception e)
             {
-
                 throw new Exception(e.Message);
             }
         }

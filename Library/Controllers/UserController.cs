@@ -51,7 +51,6 @@ namespace Library.Controllers
             }
             catch (Exception e)
             {
-
                 return BadRequest(e.Message);
                 throw;
             }
@@ -77,7 +76,6 @@ namespace Library.Controllers
             }
             catch (Exception e)
             {
-
                 throw new Exception(e.Message);
             }
         }
@@ -92,7 +90,6 @@ namespace Library.Controllers
         [HttpPut("{Id}")]
         public IActionResult Update(User user, int UserId)
         {
-
             try
             {
                 _iUserRepository.Update(user, UserId);
@@ -100,7 +97,6 @@ namespace Library.Controllers
             }
             catch (Exception e)
             {
-
                 throw new Exception(e.Message);
             }
         }
@@ -120,7 +116,6 @@ namespace Library.Controllers
             }
             catch (Exception e)
             {
-
                 throw new Exception(e.Message);
             }
         }
