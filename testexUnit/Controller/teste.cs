@@ -42,7 +42,7 @@ public class LoginControllerTeste
         userReturns.Type = "1";
 
         var fakeRepository = new Mock<IUserRepository>();
-        fakeRepository.Setup(x => x.Login(It.IsAny<string>(), It.IsAny<string>())).Returns((User)null);
+        fakeRepository.Setup(x => x.Login(It.IsAny<string>(), It.IsAny<string>())).Returns(userReturns);
 
         string IssuerValidacao = "Library";
 
@@ -53,7 +53,7 @@ public class LoginControllerTeste
            var controller = new LoginController(fakeRepository.Object);
 
         //Act
-        OkObjectResult resultado = ((OkObjectResult)controller.Login(dadosLogin));
+        OkObjectResult resultado = (OkObjectResult)controller.Login(dadosLogin);
         string token = resultado.Value.ToString().Split()[3];
 
         var jwtHandler = new JwtSecurityTokenHandler();
