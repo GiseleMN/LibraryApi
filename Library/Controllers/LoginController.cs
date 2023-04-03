@@ -38,9 +38,7 @@ namespace Library.Controllers
                 if (userFinding == null)
                 {
                     return Unauthorized(new { msg = "Email and/or Password is invaild !!" });
-                }
-
-                //Case found, continue for the create a token  
+                }//Case found, continue for the create a token                  
 
                 // define the datas that is provider in the token - Payload
                 var minhasClaims = new[]
